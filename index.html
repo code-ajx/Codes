@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <script>
+        function calculate() {
+           var li1=document.forms["myForm"]["q1"].value*document.forms["myForm"]["pr1"].value;
+           var li2=document.forms["myForm"]["q2"].value*document.forms["myForm"]["pr2"].value;
+           var li3=document.forms["myForm"]["q3"].value*document.forms["myForm"]["pr3"].value;
+           var li4=document.forms["myForm"]["q4"].value*document.forms["myForm"]["pr4"].value;
+           var li5=document.forms["myForm"]["q5"].value*document.forms["myForm"]["pr5"].value;
+           document.getElementById("total").innerHTML=li1+li2+li3+li4+li5;
+        }
+        function cleared(){
+            document.getElementById("it1").value="";
+            document.getElementById("it2").value="";
+            document.getElementById("it3").value="";
+            document.getElementById("it4").value="";
+            document.getElementById("it5").value="";
+            document.getElementById("q1").value="";
+            document.getElementById("q2").value="";
+            document.getElementById("q3").value="";
+            document.getElementById("q4").value="";
+            document.getElementById("q5").value="";
+            document.getElementById("pr1").value="";
+            document.getElementById("pr2").value="";
+            document.getElementById("pr3").value="";
+            document.getElementById("pr4").value="";
+            document.getElementById("pr5").value="";
+            document.getElementById("total").innerHTML="";
+            
+        }
+
+        </script>
+<style>
+    table {
+  border-spacing: 15px;
+}
+
+input{
+    height: 40px;
+    border: thick double #000000;
+    background-color: #f0f06f;
+}
+
+#bt1,#bt2{
+    background-color: #1285d7;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+}
+@media screen and (max-width:800px) {
+  body{
+    font-size:150%;
+  }
+  #bt1,#bt2{
+    background-color: #4CAF50;
+    font-size:142%;
+      border: none;
+  color: white;
+  padding: 30px 64px;
+  text-align: center;
+}
+}
+</style>
+
+</style>
+  
+</head>
+
+
+<body>
+
+
+<h2>Sample Items Billing Site</h2>
+
+<form name="myForm">
+<table>
+  <tr>
+    <th align="left">Item</th>
+    <th align="left">Quantity</th>
+    <th align="left">Price</th>
+  </tr>
+
+  <tr>
+    <td><input type="text" id="it1" ><br></td>
+    <td><input type="number" id="q1" ></td>
+    <td><input type="number" id="pr1"></td>
+  </tr>
+
+  <tr>
+    <td><input type="text" id="it2"></td>
+    <td><input type="number" id="q2"></td>
+    <td><input type="number" id="pr2"></td>
+  </tr>
+
+  <tr>
+    <td><input type="text" id="it3"></td>
+    <td><input type="number" id="q3"></td>
+    <td><input type="number" id="pr3"></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="it4"></td>
+    <td><input type="number" id="q4"></td>
+    <td><input type="number" id="pr4"></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="it5"></td>
+    <td><input type="number" id="q5"></td>
+    <td><input type="number" id="pr5"></td>
+  </tr>
+</table>
+
+</form>
+
+<h1>Total <p id="total"></p></h1>
+
+<br>
+<button id="bt1" onclick="calculate()">Total Bill</button>
+
+<button id="bt2" onclick="cleared()">New Bill</button>
+<h5>Done By Mohammed Ajmal</h5>
+</body>
+</html>
